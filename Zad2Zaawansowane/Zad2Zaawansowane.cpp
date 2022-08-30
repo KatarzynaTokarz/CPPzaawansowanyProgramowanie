@@ -8,7 +8,7 @@
 
 int commonLetters(std::string wyraz1, std::string wyraz2) {
 
-	std::string wspolneLitery = "";
+	std::string wspolneLitery;
 	std::set <char> set;
 
 	for (int i = 0; i < wyraz1.size(); ++i) {
@@ -30,5 +30,8 @@ int commonLetters(std::string wyraz1, std::string wyraz2) {
 int main()
 {
 	std::cout << commonLetters("kasia", "tasia") << std::endl;
-	
+	std::cout << commonLetters("mama", "tata") << std::endl;
+	std::cout << commonLetters("kon", "papuga") << std::endl;
+	std::cout << commonLetters("kasia", "kasia") << std::endl;
+
 }
