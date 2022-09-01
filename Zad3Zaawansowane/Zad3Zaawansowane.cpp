@@ -1,17 +1,24 @@
-//Zadanie 3
-//Napisz klasê StringConverter, która bedzie mia³a dwie metody(statyczne) :
-//	std::string toCamelCase(std::string)
-//	std::string toSnakeCase(std::string)
-//	camelCase : snake_case
-//	helloSDA : hello_S_D_A
-//	getColour : get_colour
-//	isThisFirstEntry : is_this_first_entry
-
 #include <iostream>
-
-class
+#include <string>
+#include <ctype.h>
 
 int main()
 {
-    std::cout << "Hello World!\n";
+
+    std::string wyraz1 = "camelCaseCase";
+    std::string wynikowyString = "";
+    for (int i = 0; i < wyraz1.size(); ++i)
+    {
+        if (wyraz1[i] == std::toupper(wyraz1[i]))
+        {
+            wynikowyString += '_';
+            wynikowyString += std::tolower(wyraz1[i]);
+        }
+        else
+        {
+            wynikowyString = wynikowyString + wyraz1[i];
+        }
+    }
+    std::cout << wynikowyString;
 }
+
