@@ -65,12 +65,11 @@ public:
 		return wynikowyString;
 	};
 
-
-
 };
 
 int main()
 {
 	MorseDecoder mors1;
-	std::cout << mors1.morseDecoder(".- .-");
+	std::cout << mors1.morseDecoder(".- .- .-") << std::endl;
+	std::cout << mors1.morseEncoder("a");
 }
