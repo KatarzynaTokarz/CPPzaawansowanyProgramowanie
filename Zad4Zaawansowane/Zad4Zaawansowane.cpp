@@ -19,7 +19,7 @@ class MorseDecoder
 {
 private:
 	std::map<const char, const std::string>morseList{ {'a', ".-"}, {'b', ".---."} };
-	std::map<const std::string, const char>alphabetList{ {".-", 'a'}, {".-- - .", 'b'}};
+	std::map<const std::string, const char>alphabetList{ {".-", 'a'}, {".---.", 'b'}};
 
 
 public:
@@ -38,18 +38,29 @@ public:
 	std::string morseDecoder(std::string morseSign)
 	{
 		std::string wynikowyString = "";
-		std::list <std::string> listaMorsa = { ".-", "abc"};
+		std::list <std::string> listaMorsa = { };
+
+		std::string tmp = "";
+
+		for (int i = 0; i < morseSign.size(); ++i)
+		{
+
+			if (morseSign[i] != ' ')
+			{
+				tmp = tmp + morseSign[i];
+			}
+			else
+			{
+				listaMorsa.push_back(tmp);
+				tmp = "";
+			}
+
+		}
 
 		for (std::list<std::string>::iterator it = listaMorsa.begin(); it != listaMorsa.end(); ++it)
 		{
-			std::cout << ' ' << *it;
 			wynikowyString = wynikowyString + alphabetList[*it];
 		}
-
-		//for (int i = 0; i < listaMorsa.size(); ++i)
-		//{
-		//	wynikowyString = wynikowyString + alphabetList[listaMorsa[i]];
-		//}
 
 		return wynikowyString;
 	};
@@ -60,5 +71,6 @@ public:
 
 int main()
 {
-
+	MorseDecoder mors1;
+	std::cout << mors1.morseDecoder(".- .-");
 }
