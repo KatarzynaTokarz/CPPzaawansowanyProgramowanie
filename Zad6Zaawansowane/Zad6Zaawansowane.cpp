@@ -4,6 +4,8 @@
 
 #include <iostream>
 #include<list>
+#include <string>
+#include <iterator>
 
 bool czyPierwsza(int n)
 {
@@ -30,9 +32,23 @@ int main()
     {
         *it = data += 1;
     }
-    for (std::list<int>::iterator it = listaLiczb.begin(); it != listaLiczb.end(); ++it)
-    {
-        std::cout << *it << ' ' << std::endl;
-    }
+    //for (std::list<int>::iterator it = listaLiczb.begin(); it != listaLiczb.end(); ++it)
+    //{
+    //    std::cout << *it << ' ' << std::endl;
+    //}
+    std::list<int> liczbyPierwsze;
+
+    liczbyPierwsze.splice(liczbyPierwsze.begin(), listaLiczb, listaLiczb.begin(), std::next(listaLiczb.begin(), listaLiczb.size() / 2));
+
+    std::cout << "Pierwsza lista: " << std::endl;
+    for (const auto& s : liczbyPierwsze) std::cout << s << ' ';
+    std::cout << std::endl;
+
+    std::cout << "Druga lista: " << std::endl;
+    for (const auto& s : listaLiczb) std::cout << s << ' ';
+    std::cout << std::endl;
     return 0;
 }
+
+
+
