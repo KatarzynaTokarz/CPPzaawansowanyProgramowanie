@@ -5,6 +5,23 @@
 #include <iostream>
 #include<list>
 
+bool czyPierwsza(int n)
+{
+    if (n <= 1)
+    {
+        return false;
+    }
+
+    for (int i = 2; i < n; ++i)
+    {
+        if ( n % i == 0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
 int main()
 {
     std::list<int>listaLiczb(1000);
