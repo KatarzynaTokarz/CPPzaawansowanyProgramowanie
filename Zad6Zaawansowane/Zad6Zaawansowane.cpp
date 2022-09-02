@@ -4,8 +4,6 @@
 
 #include <iostream>
 #include <list>
-#include <string>
-#include <iterator>
 
 bool czyPierwsza(int n)
 {
