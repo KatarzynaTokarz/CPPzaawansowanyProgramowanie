@@ -60,8 +60,8 @@
 //	c - tor kopiuj¹cy
 //	toString()
 //	operator=
-//	operator+
-//	operator*
+//	operator+ - jak przekraczamy 10 to 1 do kolejnego rzedu jest przenoszona 
+//	operator* - 
 //	operator/
 //	operator%
 //	Wszystkie operatory porównania(Przypominam, ¿e wystarczy zaimplementowaæ 1, a potem za jego pomoc¹ resztê)

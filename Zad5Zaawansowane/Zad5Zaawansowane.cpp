@@ -8,11 +8,13 @@
 #include <string>
 #include <algorithm>
 #include <list>
+#include <vector>
 
 class StringCensor
 {
 private:
-    std::list<char>censoredLetters = {};
+    //std::list<char>censoredLetters = {};
+	std::vector<char> censoredLetters;
 public:
 	void addcensoredletter(char c)
 	{
@@ -22,7 +24,12 @@ public:
 	{
 		const char y = '*';
 
-		for (std::list<char>::iterator it = censoredLetters.begin(); it != censoredLetters.end(); ++it)
+		//for (std::list<char>::iterator it = censoredLetters.begin(); it != censoredLetters.end(); ++it)
+		//{
+		//	std::replace(wyraz.begin(), wyraz.end(), *it, y);
+		//}
+
+		for (auto it = begin(censoredLetters); it != end(censoredLetters); ++it)
 		{
 			std::replace(wyraz.begin(), wyraz.end(), *it, y);
 		}
