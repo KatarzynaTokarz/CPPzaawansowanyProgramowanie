@@ -35,7 +35,9 @@ int main()
     stringCensor1.addcensoredletter('k');
     stringCensor1.addcensoredletter('a');
     stringCensor1.addcensoredletter('s');
-    std::string doOcenzurowania;
+	stringCensor1.addcensoredletter('h');
+	stringCensor1.addcensoredletter('m');
+	std::string doOcenzurowania;
     std::cout << "Podaj wyraz do ocenzurowania: " << std::endl;
     std::cin >> doOcenzurowania;
     std::cout << stringCensor1.censor(doOcenzurowania) << std::endl;
