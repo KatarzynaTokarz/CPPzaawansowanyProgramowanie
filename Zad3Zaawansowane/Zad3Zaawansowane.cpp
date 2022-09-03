@@ -4,7 +4,6 @@
 
 int main()
 {
-
     std::string wyraz1 = "camelCaseCase";
     std::string wynikowyString = "";
     for (int i = 0; i < wyraz1.size(); ++i)

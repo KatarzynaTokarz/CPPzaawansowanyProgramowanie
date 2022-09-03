@@ -13,14 +13,11 @@
 #include <list>
 #include <iostream>
 
-
-
 class MorseDecoder
 {
 private:
 	std::map<const char, const std::string>morseList{ {'a', ".-"}, {'b', ".---."} };
 	std::map<const std::string, const char>alphabetList{ {".-", 'a'}, {".---.", 'b'}};
-
 
 public:
 	std::string morseEncoder(std::string word)

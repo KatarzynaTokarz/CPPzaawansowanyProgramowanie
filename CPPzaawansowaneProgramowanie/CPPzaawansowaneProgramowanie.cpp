@@ -35,11 +35,59 @@
 //Nastêpnie posortuj i wypisz listê tak, by na pocz¹tku znalaz³y siê wartoœci parzyste uporz¹dkowane rosn¹co, a za nimi wartoœci nieparzyste uporz¹dkowane malej¹co.
 //Podpowiedz : Podziel listê na dwie osobne, odpowiednio posortuj, a nastêpnie ja po³¹cz w jedn¹.
 //
-//Zadanie 8
-//Klasy : Rectangle(przechowuje d³ugoœci boków, wylicza pole, isSquare()), RectangleGenerator(Klasa genreuj¹ca losowy prostok¹t o boku z podanego przedzia³u), RectangleManger(tutaj faktycznie implementujemy zadania)
+//Zadanie 8 --> zrobic trzeba
+//Klasy : Rectangle(przechowuje d³ugoœci boków, wylicza pole, isSquare()),
+//  RectangleGenerator(Klasa genreuj¹ca losowy prostok¹t o boku z podanego przedzia³u),
+//  RectangleManger(tutaj faktycznie implementujemy zadania)
 //Utwórz wektor 100 prostok¹tów o losowych d³ugoœciach boków z przedzia³u 0, 10 (u¿yj liczb ca³kowitych)
 //a) void printRectangles() - Wypisz wszystkie prostok¹ty(for_each + unary function)
 //b) size_t countRectangleBiggerThen(int area) - Wypisz ile jest prostok¹tów o polu wiêkszym ni¿ 50 (count_if)
 //c) std::vector copyRectangles() - Przekopiuj wszystkie prostk¹ty, które s¹ kwadratami do drugiego vectora(copy_if) i go wypisz(for_each)
 //d) void sortAreaDescending() - Posortuj vector prostok¹tów malejaco wed³ug pola powierzchni
 //e) void deleteInvalid() Usuñ wszystkie prostok¹ty, które maj¹ przynajmniej jeden bok równy 0
+//
+//Zadanie 9
+//Szyfr Cezara - zwany szyfrem przesuwnym.
+//+ std::string cypher(std::string text, int secretValue)
+//+ std::string decepher(std::string text, int secretValue)
+//https://pl.wikipedia.org/wiki/Szyfr_Cezara
+//Zadanie 10 --> trudne
+//Stwórz klasê BigInt, która bêdzie mog³a przechowywaæ dowolnie du¿¹ liczbê ca³kowit¹.
+//Do implementacji mo¿esz u¿yæ wewn¹trz stringa lub tablicy dynamicznej std::vector<short>.
+//Zaimplementuj :
+//	c - tor domyslny(daje 0)
+//	c - tor z 1 parametrem(long long)
+//	c - tor kopiuj¹cy
+//	toString()
+//	operator=
+//	operator+
+//	operator*
+//	operator/
+//	operator%
+//	Wszystkie operatory porównania(Przypominam, ¿e wystarczy zaimplementowaæ 1, a potem za jego pomoc¹ resztê)
+//	Uwaga!Napisz testy.
+//	Zadanie 11 
+//	a) Korzystaj¹c z implementacji BigInt i z poprzedniego zadania zaimplementuj funkcje : silnia i fibonacci.
+//	b) Nastêpnie zaimplementuj te metody korzystaj¹c ze standardowego long long.
+//	c) Porównaj dla jakich parametrów long long ju¿ nie jest w stanie wyliczyæ kolejnych wartoœci.
+//	d) (Opcjonalnie) Zmierz i porównaj czas wyliczania wartoœci dla parametrow od 1 do wartoœci znalezionej w punkcie c.
+//	d) (Opcjonalnie) Wylicz i zmierz czas obliczania 90!
+//	Zadanie 12 --> wymagajace
+//	Stwórz klasê bufora cyklicznego : CircularBuffer
+//	https ://en.wikipedia.org/wiki/Circular_buffer
+//Proponowane metody(jak chcesz to zawsze mozna dodac wiecej).
+//c - tor - 1 argument, na ile elementów utworzyæ bufor
+//push_back
+//pop_back
+//pop_front
+//operator[]
+//front()
+//back()
+//size()
+//capacity()
+//resize()
+//insert(pos, T);
+//Trudniejsze zadania :
+//forward iterator i reverse_iterator
+//insert(iterator, T);
+//Uwaga!Napisz testy.
