@@ -51,23 +51,23 @@ int main()
     liczbyNieparzyste.sort(std::greater<int>());
 
     std::list <int> listaMerged;
-    //std::list<int>::iterator it;
+    std::list<int>::iterator it;
 
-    //it = listaMerged.begin();
-    //listaMerged.splice(it, liczbyParzyste);
-    //listaMerged.splice(it, liczbyNieparzyste);
+    it = listaMerged.begin();
+    listaMerged.splice(it, liczbyParzyste);
+    listaMerged.splice(it, liczbyNieparzyste);
 
-    std::cout << "Liczby parzyste asc:" << std::endl;
-	for (std::list<int>::iterator it = liczbyParzyste.begin(); it != liczbyParzyste.end(); ++it)
-	{
-        listaMerged.push_back(*it);
-	}
+ //   std::cout << "Liczby parzyste asc:" << std::endl;
+	//for (std::list<int>::iterator it = liczbyParzyste.begin(); it != liczbyParzyste.end(); ++it)
+	//{
+ //       listaMerged.push_back(*it);
+	//}
 
-    std::cout << "Liczby nieparzyste desc:" << std::endl;
-    for (std::list<int>::iterator it = liczbyNieparzyste.begin(); it != liczbyNieparzyste.end(); ++it)
-    {
-        listaMerged.push_back(*it);
-    }
+ //   std::cout << "Liczby nieparzyste desc:" << std::endl;
+ //   for (std::list<int>::iterator it = liczbyNieparzyste.begin(); it != liczbyNieparzyste.end(); ++it)
+ //   {
+ //       listaMerged.push_back(*it);
+ //   }
 
     for (std::list<int>::iterator it = listaMerged.begin(); it != listaMerged.end(); ++it)
     {
