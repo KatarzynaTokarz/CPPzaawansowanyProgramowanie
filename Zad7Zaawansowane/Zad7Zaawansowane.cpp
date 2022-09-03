@@ -38,18 +38,24 @@ int main()
     {
         if (czyParzysta(*it))
         {
-            liczbyParzyste.push_back(*it);
+            
+          liczbyParzyste.push_back(*it);
 
         }
         else
         {
-            liczbyNieparzyste.push_back(*it);
+           liczbyNieparzyste.push_back(*it);
         }
     }
     liczbyParzyste.sort();
     liczbyNieparzyste.sort(std::greater<int>());
 
     std::list <int> listaMerged;
+    //std::list<int>::iterator it;
+
+    //it = listaMerged.begin();
+    //listaMerged.splice(it, liczbyParzyste);
+    //listaMerged.splice(it, liczbyNieparzyste);
 
     std::cout << "Liczby parzyste asc:" << std::endl;
 	for (std::list<int>::iterator it = liczbyParzyste.begin(); it != liczbyParzyste.end(); ++it)

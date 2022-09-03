@@ -35,7 +35,7 @@
 //Nastêpnie posortuj i wypisz listê tak, by na pocz¹tku znalaz³y siê wartoœci parzyste uporz¹dkowane rosn¹co, a za nimi wartoœci nieparzyste uporz¹dkowane malej¹co.
 //Podpowiedz : Podziel listê na dwie osobne, odpowiednio posortuj, a nastêpnie ja po³¹cz w jedn¹.
 //
-//Zadanie 8 --> zrobic trzeba
+//Zadanie 8 --> zrobic trzeba, 
 //Klasy : Rectangle(przechowuje d³ugoœci boków, wylicza pole, isSquare()),
 //  RectangleGenerator(Klasa genreuj¹ca losowy prostok¹t o boku z podanego przedzia³u),
 //  RectangleManger(tutaj faktycznie implementujemy zadania)

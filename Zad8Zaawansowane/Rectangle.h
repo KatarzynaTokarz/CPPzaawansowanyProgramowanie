@@ -7,8 +7,8 @@ private:
 	float sideB;
 
 public:
-    void input(float a, float b);
-	float calculateArea();
+    void setSides(float a, float b);
+	float getArea();
 	bool isSquare();
 };
 

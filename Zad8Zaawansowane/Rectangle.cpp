@@ -1,16 +1,23 @@
 #include "Rectangle.h"
 
-float Rectangle::calculateArea()
+float Rectangle::getArea()
 {
 	return sideA * sideB;
 }
 
 bool Rectangle::isSquare()
 {
-	return false;
+	if (sideA == sideB)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
 
-void Rectangle::input(float a, float b)
+void Rectangle::setSides(float a, float b)
 {
     sideA = a;
     sideB = b;

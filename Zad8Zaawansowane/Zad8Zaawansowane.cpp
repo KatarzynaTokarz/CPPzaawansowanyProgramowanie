@@ -16,9 +16,12 @@ int main()
 	Rectangle r1;
 	Rectangle r2;
 
-	r1.input(3, 2);
-	r2.input(9, 3);
-	std::cout << "Area r1: " << r1.calculateArea() << std::endl;
-	std::cout << "Area r2: " << r2.calculateArea() << std::endl;
+	r1.setSides(3, 3);
+	r2.setSides(9, 3);
+	std::cout << "Area r1: " << r1.getArea() << std::endl;
+	std::cout << "Area r2: " << r2.getArea() << std::endl;
+	std::cout << r1.isSquare();
+	std::cout << r2.isSquare();
+
 }
 
