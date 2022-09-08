@@ -19,7 +19,7 @@ public:
     {
         std::random_device dev;
         std::mt19937 range(dev());
-        std::uniform_int_distribution<std::mt19937::result_type> dist100(1, 10);
+        std::uniform_int_distribution<std::mt19937::result_type> dist100(1, 100);
 
         computerNumber = dist100(range);
         std::cout << "Numer, ktory trzeba zgadnac - do celow testowych gry: " << computerNumber << std::endl;
@@ -43,7 +43,7 @@ public:
             std::cin >> playerGuessNo;
             maxNoOfTries--;
 
-            if (((playerGuessNo < computerNumber) && (playerGuessNo - computerNumber) < 3) && ((playerGuessNo - computerNumber) > -3))
+            if ((playerGuessNo - computerNumber) < 3 && ((playerGuessNo - computerNumber) > -3))
             {
                 std::cout << "You're close" << std::endl;
             }
@@ -68,7 +68,7 @@ public:
             //if (playerGuessNo - computerNumber < abs(3))
             //{
             //    std::cout << "You're close" << std::endl;
-            //}&& ((playerGuessNo - computerNumber) > -3)
+            //
         } while (maxNoOfTries >0);
     }
 };
