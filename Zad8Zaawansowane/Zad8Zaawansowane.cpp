@@ -1,6 +1,7 @@
 //Klasy: Rectangle(przechowuje d³ugoœci boków, wylicza pole, isSquare()),
 #include <iostream>
 #include "Rectangle.h"
+#include "RectangleGenerator.h"
 
 //getRectangle metoda jedna
 //
@@ -23,5 +24,6 @@ int main()
 	std::cout << r1.isSquare();
 	std::cout << r2.isSquare();
 
+	RangeRandGenerator r3(1,10);
 }
 

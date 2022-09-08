@@ -1,30 +1,61 @@
 #pragma once
-class RectangleGenerator
+#include "Rectangle.h"
+#include <random>
+#include <iostream>
+using namespace std;
+
+class RangeRandGenerator
 {
-	RectangleGenerator(int min, int max)
-	{
-		random_device;
-		engine(random device);
-			distribution(engine);
+	uniform_real_distribution<int> dist;
+	random_device rd;
+	default_random_engine gen;
+public:
+	RangeRandGenerator(int from, int to) :
+		dist(from, to), gen(rd()) {}
+
+	int get() {
+		return dist(gen);
 	}
-
-	Rectangle generateRect()
-	{
-		int a = pobieraszlosowo;
-		int b = pobierasz losowo;
-
-		return Rectangle(a, b);
-
-	}
-
-private:
-	random_device;
-	engine;
-	distribution;
-
 };
 
-std::default_random_engine generator;
-std::uniform_int_distribution<int> distribution(1, 6);
-int dice_roll = distribution(generator);
+Rectangle generateRect()
+{
+	
+}
+//class RectangleGenerator
+//{
+//	RectangleGenerator(int min, int max):
+//		distribution(min, max, generator(rd()) {
+//	
+//		//std::default_random_engine generator;
+//		//std::uniform_int_distribution<int> distribution(1, 10);
+//		//int number = distribution(generator);
+//
+//	}
+//
+//	//Rectangle generateRect()
+//	//{
+//	//	int a = distribution(1, 10);
+//	//	int b = std::uniform_int_distribution<int> dist(0, 10);
+//	//
+//
+//	//	return Rectangle(a, b);
+//
+//	//}
+//
+//private:
+//		std::uniform_real_distribution<int> distribution;
+//		std::random_device rd;
+//		std::default_random_engine generator;
+//	
+//		//RangeRandGenerator(double from, double to) :
+//		//	dist(from, to), gen(rd()) {}
+//
+//		//double get() {
+//		//	return dist(gen);
+//		//}
+//};
+// 
+ 
+
 
